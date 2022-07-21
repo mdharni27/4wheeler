@@ -1,0 +1,559 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+:root {
+    --header-height: 4.375rem;
+  
+    /*========== Colors ==========*/
+    --primary-color-main: #E30613;
+    --secondary-color-main: #F6F7F8;
+    --text-color-main: #15151A;
+    --text-color-alt: #FFFFFF;
+    --text-color-medium: #8E8E8E;
+    --text-color-medium: #58595C;
+
+    /*transparent gradient*/
+    --body-color: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+     /*========== Font and typography ==========*/
+    --body-font: 'Kanit';
+    --biggest-font-size: 3.75rem;
+    --title-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.125rem;
+    --h3-font-size: 1rem;
+    --h4-font-size: 0.875rem;
+
+    /*========== Font weight ==========*/
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi: 600;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-8: .5rem;
+    --mb-12: .75rem;
+    --mb-16: 1rem;
+    --mb-24: 1.5rem;
+    --mb-32: 2rem;
+    --mb-40: 2.5rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--h3-font-size);
+    background: var(--text-color-alt);
+    color: var(--text-color-main);
+    font-weight: var(--font-regular);
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+/*=============== HEADER 1 ===============*/
+.heading__28{
+    font-weight: var(--font-regular);
+    font-size: var(--h1-font-size);
+    color: white;
+}
+
+.heading__18{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-light);
+}
+
+.heading__16{
+    font-weight: var(--font-regular);
+}
+
+.heading__14{
+    font-weight: var(--font-regular);
+    font-size: var(--h4-font-size);
+}
+
+.header{
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    z-index: var(--z-fixed);
+    background: transparent;
+    backdrop-filter: blur(24px);
+    --webkit-backdrop-filter: blur(24px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1362px;
+}
+
+.nav__logo-img{
+    width: 9.175rem;
+    height: 1.52rem;
+}
+
+.nav__logo{
+    display: grid;
+}
+
+.nav__list{
+    display: flex;
+}
+
+/*=============== NAV-TOOGLE 1(1.3) (Concatinaiton) NAV-CLOSE 1(2.1) ===============*/
+.nav__toogle, .nav__close{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.main__hover:hover{
+    color: var(--primary-color-main);
+}
+
+.menu__icon{
+    position: relative;
+    top: .1rem;
+}
+
+/*=============== NAV-MENU 1(2) ===============*/
+.nav__menu{
+    position: absolute;
+    top: -560px;
+    width: 100%;
+    height: 560px;
+    background: var(--primary-color-main);
+    transform: scale(1) rotateZ(0deg);
+    transition: all 1s cubic-bezier(0.50, 0.01, 0, 0.88);
+}
+
+.nav__close{
+    height: var(--header-height);
+    color: var(--text-color-alt);
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+
+.close__icon{
+    height: 18px;
+    width: 18px;
+}
+
+.icon{
+    height: 17px;
+    width: 17px;
+}
+
+.close__container{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    color: var(--text-color-alt);
+}
+
+
+/*=============== MENU-LIST (2.2) ===============*/
+.nav__menu-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*=============== MENU-LIST 1(2.2.1) (concatination) MENU-LIST 2 (2.2.2) & MENU-LIST 3 (2.2.3) ===============*/
+.menu-list__1, .menu-list__2, .menu-list__3, .collection{
+    margin-top: 4.5rem;
+}
+
+/*=============== BUTTON 1(2.2.1.2) ===============*/
+.button{
+   background-color: var(--text-color-alt);
+   color: black;
+   display: inline-flex;
+   padding: .875rem 1.5rem;
+   border-radius: .9375rem;
+   column-gap: 1rem;
+   align-items: center;
+}
+
+.button__facebook{
+    background-color: #415DAE;
+    color: white;
+}
+
+.button__link{
+    color: white;
+    font-weight: var(--font-light);
+    text-decoration: underline;
+    display: block;
+    margin-top: var(--mb-16);
+}
+
+.button__primary{
+    display: inline-block;
+    background-color: transparent;
+   color: var(--text-color-alt);
+   padding: .75rem 1.5rem;
+   border: 1px solid white;
+   border-radius: .9375rem;
+   font-size: var(--h2-font-size);
+   font-weight: var(--font-light);
+}
+
+.menu__button{
+    margin-top: var(--mb-24);
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.br{
+    display: flex;
+    align-items: center;
+    column-gap: 1.7rem;
+}
+
+.horizontal__line{
+    height: 0;
+    width: 117px;
+}
+
+.horizontal__OR, .horizontal__line{
+    opacity: 0.6;
+    color: white;
+    font-weight: var(--font-light);
+}
+
+/*=============== BREAK 1(2.2.1.4) (Concatinaiton) BUTTON-PRIMARY 1(2.2.1.5) ===============*/
+.br, .create__account-btn{
+    margin-top: var(--mb-40);
+}
+
+
+/*=============== MENU-LIST 2(2.2.2) ===============*/
+.list2__heading{
+    color: var(--text-color-alt);
+    opacity: 0.7;
+}
+
+.important__links{
+    display: grid;
+    row-gap: 0.8rem;
+}
+/*=============== MENU-LIST 3(2.2.3) ===============*/
+
+.align{
+    display: flex;
+    column-gap: .75rem;
+    color: white;
+}
+
+#link-instagram{
+    margin-top: 1rem;   
+}
+
+/*=============== MENU-LIST 2(2.2.2) (Concatination) MENU-LIST 2(2.2.3) ===============*/
+.list2__heading{
+    margin-bottom: var(--mb-32);
+}
+
+/*=============== SHOW-MENU ===============*/
+.show-menu{
+    top: 0;
+    transform: scale(1) rotateZ(0deg);
+}
+
+
+
+/*=============== UNDERLINE ANIMATIONS ===============*/
+ .underline__animations {
+   display: inline-block;
+   position: relative;
+ }
+ 
+ .underline__animations:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: rgb(255, 62, 62);
+   transform-origin: bottom right;
+   transition: transform 0.8s ease-out;
+ }
+ 
+ .underline__animations:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+ }
+
+ .menu__link:after{
+    background-color: white;
+ }
+
+
+
+ /*=============== LOGIN-PAGE ===============*/
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+}
+
+.blend{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+
+.container__login{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap{
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__title{
+    display: flex;
+    align-items: center;
+}
+
+.sologon{
+    color: white;
+    opacity: 0.7;
+}
+
+
+/*=============== L USER-PANNEL 1(1.2) NAV-MENU 1(2) ===============*/
+.user__pannel{
+    display: grid;
+    align-items:flex-start;
+    justify-content: center;
+    padding: var(--mb-40);
+    width: 33.5rem;
+    height: 39.8125rem;
+    background-color: white;
+    border-radius: 0.9375rem;
+}
+
+.pannel__container{
+    width: 28.8125rem;
+}
+
+.pannel__login{
+    color: var(--text-color-main);
+}
+
+.new__user{
+    color: #15151A;
+}
+
+.link__account{
+    color: var(--primary-color-main);
+    text-decoration: underline;
+}
+
+.pannel__create-account{
+    font-weight: var(--font-light);
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+
+.userinput__container{
+    margin-top: var(--mb-40);
+}
+
+.input__1{
+    display: grid;
+}
+
+.lables{
+    font-weight: var(--font-regular);
+    color: var(--text-color-main);
+}
+
+#login-email{
+    margin-bottom: var(--mb-16);
+}
+
+#login-password, .br{
+    margin-bottom: var(--mb-40);
+}
+
+.input__1 input{
+    margin-top: .5rem;
+    height: 3.265rem;
+    background-color: #F6F7F8;
+    border-radius: .5rem;
+    outline: none;
+    font-family: var(--body-font);
+    border: 1px solid  #bdbdbd;
+    padding-left: var(--mb-24);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-light); 
+}
+
+::placeholder{
+    color:#8E8E8E;
+}
+
+.input__1 input:focus,
+.input__1 input:valid{
+    border-color: var(--text-color-main);
+}
+
+.submit__container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login__button{
+    border-color: var(--primary-color-main);
+    color: var(--primary-color-main)
+}
+
+.horizontal__OR{
+    color: var(--text-color-medium);
+}
+
+.horizontal__switch{
+    width: 12.28125rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+.google__switch{
+    background-color: var(--text-color-main);
+    color: white;
+}
+
+.menu__button-align{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*=============== L USER-PANNEL 2(2.2) NAV-MENU 1(2) ===============*/
+.pannel__extend{
+    height: 46.625rem;
+}
+
+#signup-email, #signup-name{
+    margin-bottom: var(--mb-16);
+}
+
+#signup-password, .br{
+    margin-bottom: var(--mb-40);
+}
+
+
+ /*=============== MEDIA QUIRIES ===============*/
+
+@media  screen and (max-width: 600px){
+    .nav__logo-img{
+        width: 6.6rem;
+    }
+
+    /*=============== NAV 1(1) (Concatinaiton) NAV-MENU 1(2) ===============*/
+    .nav, .nav__container{
+       margin: 0 2rem;
+    }
+    .nav__list{
+        display: none;
+    }
+    
+    .menu__icon{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1600px){
+
+     /*=============== NAV 1(1) (Concatinaiton) NAV-MENU 1(2) ===============*/
+    .nav, .nav__container{
+        margin: 0 auto;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 50px;
+    }
+
+    .wrap{
+        margin: 10rem auto;
+    }
+
+    .wrap__container{
+        margin: 7rem auto;
+    }
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1600px) {
+
+     /*=============== NAV 1(1) (Concatinaiton) NAV-MENU 1(2) ===============*/
+    .nav, .nav__container{
+        margin: 0 5rem;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 50px;
+    }
+
+    .wrap{
+        max-width: 1000px;
+        margin: 2.5rem auto;
+    }
+
+    .wrap__container{
+        margin: 0rem auto;
+    }
+}
